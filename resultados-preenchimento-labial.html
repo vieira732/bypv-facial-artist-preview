@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Resultados · Preenchimento Labial — BYPV Facial Artist</title>
+<meta name="description" content="Resultados reais de Preenchimento Labial — BYPV Facial Artist, Dr. Paulo Vitor Rocha." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --grafite:#1E1E1C;
+    --branco:#FFFFFF;
+    --off:#F4F3F1;
+    --off-2:#EAE8E4;
+    --line:rgba(30,30,28,.16);
+    --line-light:rgba(255,255,255,.18);
+    --line-light-2:rgba(255,255,255,.08);
+    --muted:#6B6862;
+    --muted-light:rgba(255,255,255,.62);
+    --raleway:"Raleway", sans-serif;
+    --inter:"Inter", sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--inter);background:var(--grafite);color:var(--branco);line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+  h1,h2,h3{font-family:var(--raleway);font-weight:600;line-height:1.08;letter-spacing:-.005em}
+  .eyebrow{font-family:var(--inter);font-weight:500;font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted-light)}
+
+  .btn{display:inline-flex;align-items:center;gap:.65em;font-family:var(--inter);font-weight:500;font-size:.85rem;letter-spacing:.06em;padding:15px 30px;cursor:pointer;border:1px solid transparent;transition:background .3s ease,color .3s ease,border-color .3s ease;white-space:nowrap;text-transform:uppercase}
+  .btn svg{width:16px;height:16px;flex:none}
+  .btn--solid-light{background:var(--branco);color:var(--grafite);border-color:var(--branco)}
+  .btn--solid-light:hover{background:transparent;color:var(--branco)}
+  .btn--outline-light{background:transparent;color:var(--branco);border-color:var(--line-light)}
+  .btn--outline-light:hover{background:var(--branco);color:var(--grafite);border-color:var(--branco)}
+
+  .logo{display:inline-flex;align-items:center;gap:14px;line-height:1}
+  .logo .mark{font-family:var(--raleway);font-weight:700;letter-spacing:.01em;font-size:1.25rem}
+  .logo .div{width:1px;height:22px;background:currentColor;opacity:.4}
+  .logo .sub{font-family:var(--inter);font-weight:400;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;opacity:.82}
+
+  header{padding:26px 0;border-bottom:1px solid var(--line-light-2)}
+  header .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .back{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-light)}
+  .back svg{width:16px;height:16px}
+  .back:hover{color:var(--branco)}
+
+  .lang-switch{display:flex;gap:8px;align-items:center}
+  .lang-switch button{width:26px;height:19px;padding:0;border:1px solid var(--line-light);background:transparent;cursor:pointer;opacity:.5;transition:opacity .3s,border-color .3s;overflow:hidden;border-radius:2px;line-height:0}
+  .lang-switch button.active{opacity:1;border-color:var(--branco)}
+  .lang-switch button:hover{opacity:1}
+  .lang-switch svg{width:100%;height:100%;display:block}
+
+  .page-head{padding:72px 0 48px;text-align:center}
+  .page-head h1{font-size:clamp(2.1rem,5vw,3.2rem);margin:16px 0 14px}
+  .page-head p{max-width:52em;margin:0 auto;color:var(--muted-light);font-size:1rem;font-weight:300}
+
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:90px}
+  .gcard{position:relative;overflow:hidden;background:#141412;aspect-ratio:4/5;border:1px solid var(--line-light-2)}
+  .gcard img{width:100%;height:100%;object-fit:cover}
+  .gcard .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(0deg,rgba(20,20,18,.9),transparent)}
+  .gcard .cap .t{font-family:var(--raleway);font-size:.94rem;font-weight:600}
+  .gcard .cap .s{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-light);margin-top:4px;font-weight:300}
+  .gcard.add{display:flex;align-items:center;justify-content:center;border:1px dashed var(--line-light);background:transparent;color:var(--muted-light);text-align:center}
+  .gcard.add .mono{font-family:var(--raleway);font-weight:300;font-size:2rem}
+  .gcard.add small{display:block;font-size:.7rem;letter-spacing:.04em;margin-top:8px;line-height:1.5;font-weight:400}
+
+  .cta{padding:90px 0 100px;text-align:center;background:var(--off);color:var(--grafite)}
+  .cta h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin:6px 0 26px}
+  .cta .btn--solid-light{background:var(--grafite);color:var(--branco);border-color:var(--grafite)}
+  .cta .btn--solid-light:hover{background:transparent;color:var(--grafite)}
+
+  footer{padding:32px 0;text-align:center;color:var(--muted-light);font-size:.78rem}
+
+  @media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){
+    .gallery{grid-template-columns:1fr}
+    header .nav .logo .sub{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="back" href="index.html#resultados">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 18l-6-6 6-6"/></svg>
+      <span data-i18n="back">Voltar</span>
+    </a>
+    <a class="logo" href="index.html" aria-label="BYPV Facial Artist">
+      <span class="mark">BYPV</span><span class="div"></span><span class="sub">Facial Artist</span>
+    </a>
+    <div class="lang-switch" aria-label="Idioma">
+      <button type="button" id="langPt" aria-label="Português" title="Português">
+        <svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,3 27,10 15,17 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.2" fill="#002776"/></svg>
+      </button>
+      <button type="button" id="langEn" aria-label="English" title="English">
+        <svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#FFFFFF"/><rect width="30" height="2.2" y="0" fill="#B22234"/><rect width="30" height="2.2" y="4.4" fill="#B22234"/><rect width="30" height="2.2" y="8.8" fill="#B22234"/><rect width="30" height="2.2" y="13.2" fill="#B22234"/><rect width="30" height="2.2" y="17.6" fill="#B22234"/><rect width="13" height="11" fill="#3C3B6E"/></svg>
+      </button>
+    </div>
+    <a class="btn btn--solid-light js-wpp" href="#" data-i18n="btn_consulta">AGENDE UMA CONSULTA</a>
+  </div>
+</header>
+
+<section class="page-head wrap">
+  <div class="eyebrow" data-i18n="eyebrow">Resultados</div>
+  <h1 data-i18n="title">Preenchimento Labial</h1>
+  <p data-i18n="desc">Definição, proporção e refinamento dos lábios de forma personalizada. Resultados podem variar de pessoa para pessoa — a indicação é sempre definida em avaliação individual.</p>
+</section>
+
+<section class="wrap">
+  <div class="gallery">
+    <div class="gcard">
+      <img src="assets/antes-depois-preenchimento-labial.jpg" alt="Preenchimento labial — antes e depois" />
+      <div class="cap"><div class="t" data-i18n="cap1_t">Antes &amp; Depois</div><div class="s" data-i18n="title">Preenchimento Labial</div></div>
+    </div>
+    <div class="gcard">
+      <img src="assets/perfil-preenchimento-labial.jpg" alt="Preenchimento labial — perfil" />
+      <div class="cap"><div class="t" data-i18n="cap2_t">Perfil &amp; contorno</div><div class="s" data-i18n="title">Preenchimento Labial</div></div>
+    </div>
+    <div class="gcard">
+      <img src="assets/procedimento-preenchimento-labial.jpg" alt="Preenchimento labial" />
+      <div class="cap"><div class="t" data-i18n="cap3_t">Resultado</div><div class="s" data-i18n="title">Preenchimento Labial</div></div>
+    </div>
+    <div class="gcard add"><div><div class="mono">+</div><small data-i18n-html="add">Adicione mais<br>resultados aqui</small></div></div>
+    <div class="gcard add"><div><div class="mono">+</div><small data-i18n-html="add">Adicione mais<br>resultados aqui</small></div></div>
+    <div class="gcard add"><div><div class="mono">+</div><small data-i18n-html="add">Adicione mais<br>resultados aqui</small></div></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--muted)">BYPV · Facial Artist</div>
+    <h2 data-i18n-html="cta_h2">Sua transformação começa com uma <span style="font-weight:300">avaliação.</span></h2>
+    <a class="btn btn--solid-light js-wpp" href="#" data-i18n="btn_consulta">AGENDE UMA CONSULTA</a>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> BYPV · Facial Artist · <span data-i18n="rights">Todos os direitos reservados</span></footer>
+
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+  const WHATSAPP = "5521920066424";
+  const MSG_PT = "Olá! Vim pelo site da BYPV e gostaria de agendar minha avaliação com o Dr. Paulo Vitor.";
+  const MSG_EN = "Hello! I found the BYPV website and I'd like to book my consultation with Dr. Paulo Vitor.";
+
+  const I18N = {
+    pt: {
+      back:"Voltar", btn_consulta:"AGENDE UMA CONSULTA",
+      eyebrow:"Resultados", title:"Preenchimento Labial",
+      desc:"Definição, proporção e refinamento dos lábios de forma personalizada. Resultados podem variar de pessoa para pessoa — a indicação é sempre definida em avaliação individual.",
+      cap1_t:"Antes & Depois", cap2_t:"Perfil & contorno", cap3_t:"Resultado",
+      add:"Adicione mais<br>resultados aqui",
+      cta_h2:"Sua transformação começa com uma <span style=\"font-weight:300\">avaliação.</span>",
+      rights:"Todos os direitos reservados"
+    },
+    en: {
+      back:"Back", btn_consulta:"BOOK A CONSULTATION",
+      eyebrow:"Results", title:"Lip Filler",
+      desc:"Definition, proportion and refinement of the lips, tailored to you. Results may vary from person to person — the right treatment is always defined during an individual consultation.",
+      cap1_t:"Before & After", cap2_t:"Profile & contour", cap3_t:"Result",
+      add:"Add more<br>results here",
+      cta_h2:"Your transformation starts with a <span style=\"font-weight:300\">consultation.</span>",
+      rights:"All rights reserved"
+    }
+  };
+
+  function setLang(lang){
+    const dict = I18N[lang];
+    document.querySelectorAll("[data-i18n]").forEach(el => { if (dict[el.dataset.i18n] != null) el.textContent = dict[el.dataset.i18n]; });
+    document.querySelectorAll("[data-i18n-html]").forEach(el => { if (dict[el.dataset.i18nHtml] != null) el.innerHTML = dict[el.dataset.i18nHtml]; });
+    document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+    langPt.classList.toggle("active", lang === "pt");
+    langEn.classList.toggle("active", lang === "en");
+    localStorage.setItem("bypv_lang", lang);
+    const wppLink = "https://api.whatsapp.com/send?phone=" + WHATSAPP + "&text=" + encodeURIComponent(lang === "en" ? MSG_EN : MSG_PT);
+    document.querySelectorAll(".js-wpp").forEach(a => a.setAttribute("href", wppLink));
+  }
+  const langPt = document.getElementById("langPt"), langEn = document.getElementById("langEn");
+  langPt.addEventListener("click", () => setLang("pt"));
+  langEn.addEventListener("click", () => setLang("en"));
+  setLang(localStorage.getItem("bypv_lang") === "en" ? "en" : "pt");
+</script>
+</body>
+</html>

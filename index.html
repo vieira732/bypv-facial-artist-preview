@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BYPV · Facial Artist — Dr. Paulo Vitor</title>
+<meta name="description" content="BYPV · Facial Artist. Harmonização orofacial e preenchimento labial com precisão técnica e resultados naturais. Dr. Paulo Vitor — Rio de Janeiro." />
+
+<!--
+  ============================================================
+  ☑  IDENTIDADE VISUAL — Manual de Marca BYPV
+  ------------------------------------------------------------
+  Cores:   Grafite #1E1E1C  ·  Branco #FFFFFF  (monocromático)
+  Fontes:  Raleway (logo/títulos)  ·  Inter (corpo/legendas)
+  Regras:  sem sombras, linhas finas, formas simples, muito respiro
+  Marca:   assinatura sempre "BYPV | FACIAL ARTIST"
+  ------------------------------------------------------------
+  ☑  EDITAR ANTES DE PUBLICAR (procurar no <script> no final):
+    WHATSAPP  -> número real (5521XXXXXXXXX)
+    INSTAGRAM -> @vitorpsar (confirmar)
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    /* PALETA INSTITUCIONAL — Manual BYPV */
+    --grafite:#1E1E1C;
+    --grafite-90:#26262320;
+    --branco:#FFFFFF;
+    --off:#F4F3F1;          /* branco levemente quente p/ seções claras */
+    --off-2:#EAE8E4;
+    --line:rgba(30,30,28,.16);
+    --line-2:rgba(30,30,28,.08);
+    --line-light:rgba(255,255,255,.18);
+    --line-light-2:rgba(255,255,255,.08);
+    --muted:#6B6862;
+    --muted-light:rgba(255,255,255,.62);
+    --raleway:"Raleway", sans-serif;
+    --inter:"Inter", sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--inter);
+    background:var(--grafite);
+    color:var(--branco);
+    line-height:1.65;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+
+  /* ---- tipografia base (Raleway p/ títulos, Inter p/ corpo) ---- */
+  h1,h2,h3,h4{font-family:var(--raleway);font-weight:600;line-height:1.08;letter-spacing:-.005em}
+  .eyebrow{font-family:var(--inter);font-weight:500;font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted)}
+  .on-dark .eyebrow,.eyebrow.light{color:var(--muted-light)}
+
+  /* ---- botões: linhas finas, sem sombra ---- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.65em;
+    font-family:var(--inter);font-weight:500;font-size:.85rem;letter-spacing:.02em;
+    padding:15px 30px;cursor:pointer;border:1px solid transparent;
+    transition:background .3s ease,color .3s ease,border-color .3s ease;white-space:nowrap;
+    text-transform:lowercase;
+  }
+  .btn.js-wpp{text-transform:uppercase;letter-spacing:.06em}
+  .btn svg{width:16px;height:16px;flex:none}
+  .btn--solid-light{background:var(--branco);color:var(--grafite);border-color:var(--branco)}
+  .btn--solid-light:hover{background:transparent;color:var(--branco)}
+  .btn--solid-dark{background:var(--grafite);color:var(--branco);border-color:var(--grafite)}
+  .btn--solid-dark:hover{background:transparent;color:var(--grafite)}
+  .btn--outline-light{background:transparent;color:var(--branco);border-color:var(--line-light)}
+  .btn--outline-light:hover{background:var(--branco);color:var(--grafite);border-color:var(--branco)}
+  .btn--outline-dark{background:transparent;color:var(--grafite);border-color:var(--line)}
+  .btn--outline-dark:hover{background:var(--grafite);color:var(--branco);border-color:var(--grafite)}
+
+  /* ================= LOGO (assinatura BYPV) ================= */
+  .logo{display:inline-flex;align-items:center;gap:14px;line-height:1}
+  .logo .mark{font-family:var(--raleway);font-weight:700;letter-spacing:.01em;font-size:1.5rem}
+  .logo .div{width:1px;height:26px;background:currentColor;opacity:.4}
+  .logo .sub{font-family:var(--inter);font-weight:400;font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;opacity:.82}
+  .logo.sm .mark{font-size:1.25rem}
+  .logo.sm .div{height:22px}
+  .logo.sm .sub{font-size:.58rem}
+  .logo.lg .mark{font-size:2.4rem}
+  .logo.lg .div{height:42px}
+  .logo.lg .sub{font-size:.8rem;letter-spacing:.3em}
+
+  /* ================= NAV ================= */
+  header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.4s ease}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 26px;max-width:1180px;margin:0 auto;transition:.4s ease}
+  header.scrolled{background:rgba(30,30,28,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line-light-2)}
+  header.scrolled .nav{padding:14px 26px}
+  .nav-links{display:flex;gap:36px;align-items:center}
+  .nav-links a{font-family:var(--inter);font-size:.76rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--branco);position:relative;transition:color .3s}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--branco);transition:width .3s}
+  .nav-links a:hover{opacity:.7}
+  .nav-links a:hover::after{width:100%}
+  .nav .btn{padding:11px 22px;font-size:.76rem}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px}
+  .menu-btn span{width:24px;height:1px;background:var(--branco);display:block;transition:.3s}
+
+  /* ================= LANG SWITCH (bandeiras) ================= */
+  .lang-switch{display:flex;gap:8px;align-items:center}
+  .lang-switch button{width:26px;height:19px;padding:0;border:1px solid var(--line-light);background:transparent;cursor:pointer;opacity:.5;transition:opacity .3s,border-color .3s;overflow:hidden;border-radius:2px;line-height:0}
+  .lang-switch button.active{opacity:1;border-color:var(--branco)}
+  .lang-switch button:hover{opacity:1}
+  .lang-switch svg{width:100%;height:100%;display:block}
+  .drawer .lang-switch{margin-top:30px}
+  .drawer .lang-switch button{width:34px;height:25px}
+  /* header no topo: sobre foto -> logo e menu claros p/ leitura */
+  header:not(.scrolled) .logo{color:var(--branco)}
+  header:not(.scrolled) .nav .btn--solid-light{background:var(--branco);color:var(--grafite);border-color:var(--branco)}
+  header:not(.scrolled) .nav .btn--solid-light:hover{background:transparent;color:var(--branco)}
+  /* header rolado: mantém esquema claro sobre grafite */
+  header.scrolled .nav-links a{color:var(--muted-light)}
+  header.scrolled .nav-links a::after{background:var(--branco)}
+  header.scrolled .nav-links a:hover{color:var(--branco);opacity:1}
+  header.scrolled .logo{color:var(--branco)}
+  header.scrolled .menu-btn span{background:var(--branco)}
+
+  /* ================= HERO ================= */
+  .hero{position:relative;min-height:100vh;width:100%;overflow:hidden;background:#C9C2B8}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:left center}
+  .hero-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end}
+  .hero-content{
+    /* desktop: logo grande, ancorada no espaço vazio à direita da foto (o Paulo Vitor fica no terço esquerdo) */
+    width:min(640px,52vw);max-width:640px;margin:0;
+    padding:0 clamp(24px,5vw,64px);
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+  }
+  .hero-logo{width:100%;height:auto;margin-bottom:52px;filter:drop-shadow(0 2px 24px rgba(20,18,15,.35))}
+  .hero .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center}
+  .hero-scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--grafite);opacity:.55}
+  .hero-scroll .l{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400}
+  .hero-scroll svg{width:16px;height:16px;animation:bounce 1.8s infinite}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
+  /* ================= SOBRE ================= */
+  .sobre{padding:110px 0;background:var(--off);color:var(--grafite)}
+  .sobre-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+  .sobre-img{position:relative}
+  .sobre-img .frame{overflow:hidden;aspect-ratio:549/789;border:1px solid var(--line)}
+  .sobre-img .frame img{width:100%;height:100%;object-fit:cover}
+  .sobre-img .tag{position:absolute;right:-15px;top:30px;writing-mode:vertical-rl;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .sobre h2{font-size:clamp(1.9rem,4.2vw,3rem);margin:18px 0 24px;font-weight:600}
+  .sobre h2 .thin{font-weight:300}
+  .sobre p{color:#3A372F;margin-bottom:18px;max-width:40em;font-weight:300;font-size:1rem}
+  .creds{list-style:none;margin:30px 0 34px;display:grid;gap:14px}
+  .creds li{display:flex;gap:14px;font-size:.94rem;align-items:flex-start;font-weight:400}
+  .creds .ic{width:18px;height:18px;flex:none;margin-top:3px}
+  .creds svg{width:18px;height:18px;stroke:var(--grafite)}
+
+  /* ================= PROCEDIMENTOS ================= */
+  .proc{padding:112px 0;background:var(--grafite)}
+  .sec-head{max-width:660px;margin-bottom:56px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{font-size:clamp(2rem,4.4vw,3.1rem);margin:18px 0;font-weight:600}
+  .sec-head h2 .thin{font-weight:300}
+  .sec-head p{color:var(--muted-light);font-size:1rem;font-weight:300}
+  .sec-head.center p{margin-left:auto;margin-right:auto}
+
+  .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .pcard{border:1px solid var(--line-light-2);overflow:hidden;display:flex;flex-direction:column;transition:border-color .35s ease}
+  .pcard:hover{border-color:var(--line-light)}
+  .pcard .pimg{position:relative;aspect-ratio:4/5;overflow:hidden;background:#141412}
+  .pcard .pimg img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .pcard:hover .pimg img{transform:scale(1.04)}
+  .pcard .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#1A1A18;color:var(--muted-light);text-align:center;padding:18px;border-bottom:1px solid var(--line-light-2)}
+  .pcard .ph .mono{font-family:var(--raleway);font-weight:300;font-size:2.4rem;line-height:1;color:var(--branco)}
+  .pcard .ph small{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase}
+  .pcard .pbody{padding:24px 22px 28px}
+  .pcard .num{font-family:var(--inter);font-weight:300;font-size:.8rem;letter-spacing:.1em;color:var(--muted-light)}
+  .pcard h3{font-size:1.14rem;margin:10px 0 10px;font-weight:600}
+  .pcard p{font-size:.85rem;color:var(--muted-light);line-height:1.6;font-weight:300}
+  .pcard .brands{font-family:var(--inter);font-size:.72rem;letter-spacing:.04em;color:var(--branco);font-weight:500;margin:-2px 0 8px}
+
+  /* ================= RESULTADOS (carrossel) ================= */
+  .resultados{padding:112px 0;background:var(--off);color:var(--grafite);overflow:hidden}
+  .res-head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:38px;flex-wrap:wrap}
+  .res-head-row .sec-head{margin-bottom:0}
+  .res-head-row .sec-head p{color:var(--muted)}
+  .res-arrows{display:flex;gap:10px}
+  .res-arrows button{width:50px;height:50px;border:1px solid var(--line);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s;color:var(--grafite)}
+  .res-arrows button:hover{background:var(--grafite);color:var(--branco);border-color:var(--grafite)}
+  .res-arrows svg{width:18px;height:18px}
+  .res-track{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab}
+  .res-track::-webkit-scrollbar{display:none}
+  .res-track.drag{cursor:grabbing;scroll-snap-type:none}
+  .rcard{position:relative;overflow:hidden;background:var(--grafite);flex:0 0 310px;scroll-snap-align:start;aspect-ratio:3/4;border:1px solid var(--line)}
+  .rcard img{width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none;transition:transform .6s ease}
+  .rcard:hover img{transform:scale(1.03)}
+  .rcard .cap{position:absolute;left:0;right:0;bottom:0;padding:48px 20px 18px;background:linear-gradient(0deg,rgba(20,20,18,.9),transparent);color:var(--branco)}
+  .rcard .cap .t{font-family:var(--raleway);font-size:1.05rem;font-weight:600}
+  .rcard .cap .s{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-light);margin-top:5px;font-weight:300}
+  .rcard .ab{position:absolute;top:14px;left:14px;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;background:rgba(20,20,18,.55);backdrop-filter:blur(6px);color:var(--branco);padding:6px 12px;border:1px solid var(--line-light);font-weight:300}
+  .rcard.add{display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);background:var(--off-2);color:var(--muted);text-align:center}
+  .rcard.add .mono{font-family:var(--raleway);font-weight:300;font-size:2rem;color:var(--grafite)}
+  .rcard.add small{display:block;font-size:.72rem;letter-spacing:.04em;margin-top:8px;line-height:1.5;font-weight:400}
+  .res-note{text-align:center;margin-top:30px;font-size:.8rem;color:var(--muted);letter-spacing:.02em;font-weight:300}
+
+  /* ================= PROVAS SOCIAIS ================= */
+  .provas{padding:112px 0;background:var(--grafite);overflow:hidden}
+  .pv-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab}
+  .pv-track::-webkit-scrollbar{display:none}
+  .pv-track.drag{cursor:grabbing;scroll-snap-type:none}
+  .pvcard{flex:0 0 280px;scroll-snap-align:start;overflow:hidden;border:1px solid var(--line-light-2);background:#1A1A18}
+  .pvcard img{width:100%;display:block;pointer-events:none;user-select:none}
+  .pvcard.ph{aspect-ratio:9/16;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border:1px dashed var(--line-light-2);color:var(--muted-light);text-align:center;padding:26px}
+  .pvcard.ph svg{width:34px;height:34px;stroke:var(--muted-light);opacity:.8}
+  .pvcard.ph b{font-family:var(--raleway);font-weight:500;font-size:1.05rem;color:var(--branco)}
+  .pvcard.ph small{font-size:.72rem;letter-spacing:.03em;line-height:1.55;font-weight:300}
+
+  /* ================= CTA ================= */
+  .cta{padding:120px 0;background:var(--off);color:var(--grafite);text-align:center;position:relative;overflow:hidden}
+  .cta .logo{margin-bottom:30px;color:var(--grafite)}
+  .cta h2{font-size:clamp(2rem,5vw,3.4rem);max-width:15em;margin:0 auto 18px;font-weight:600}
+  .cta h2 .thin{font-weight:300}
+  .cta p{color:#3A372F;max-width:32em;margin:0 auto 38px;font-weight:300}
+
+  /* ================= CONTATO / FOOTER ================= */
+  .contato{padding:100px 0 44px;background:var(--grafite)}
+  .contato-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:58px;align-items:start}
+  .contato h2{font-size:clamp(1.9rem,4vw,2.8rem);margin:18px 0 28px;font-weight:600}
+  .contato h2 .thin{font-weight:300}
+  .info{list-style:none;display:grid;gap:24px;margin-bottom:34px}
+  .info li{display:flex;gap:16px;align-items:flex-start}
+  .info svg{width:20px;height:20px;stroke:var(--muted-light);flex:none;margin-top:3px}
+  .info b{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-light);margin-bottom:4px;font-weight:400}
+  .info span{font-size:.98rem;color:var(--branco);font-weight:300}
+  .map{overflow:hidden;border:1px solid var(--line-light-2);aspect-ratio:1/1;background:#141412}
+  .map iframe{width:100%;height:100%;border:0}
+  footer{border-top:1px solid var(--line-light-2);margin-top:52px;padding-top:30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+  footer small{color:var(--muted-light);font-size:.76rem;font-weight:300}
+  .socials{display:flex;gap:12px}
+  .socials a{width:40px;height:40px;border:1px solid var(--line-light-2);display:flex;align-items:center;justify-content:center;transition:.3s}
+  .socials a:hover{background:var(--branco);color:var(--grafite);border-color:var(--branco)}
+  .socials svg{width:17px;height:17px}
+
+  /* ---- floating whatsapp (monocromático, sem cor externa) ---- */
+  .float-wpp{position:fixed;right:24px;bottom:24px;z-index:200;width:56px;height:56px;border:1px solid var(--branco);background:var(--grafite);color:var(--branco);display:flex;align-items:center;justify-content:center;transition:.3s}
+  .float-wpp:hover{background:var(--branco);color:var(--grafite)}
+  .float-wpp svg{width:26px;height:26px}
+
+  /* ---- reveal ---- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+
+  /* ---- responsive ---- */
+  @media(max-width:920px){
+    .hero-grid,.sobre-grid,.contato-grid{grid-template-columns:1fr}
+    .proc-grid{grid-template-columns:repeat(2,1fr)}
+    .sobre-img{max-width:380px;margin:0 auto}
+    .nav-links{display:none}
+    .menu-btn{display:flex}
+    .nav .btn--solid-light{display:none}
+    /* hero: reduz coluna e ancora a logo mais à direita, sobre o espaço vazio */
+    .hero-content{margin-left:auto;width:56%;max-width:none;padding:0 clamp(20px,4vw,40px);transform:none}
+    .hero-logo{width:min(360px,100%)}
+  }
+  @media(max-width:620px){
+    .proc-grid{grid-template-columns:1fr}
+    /* hero mobile: foco no espaço vazio (topo direito), conteúdo centralizado sobre scrim claro */
+    .hero-bg img{object-position:28% center}
+    .hero-overlay{background:linear-gradient(180deg,rgba(201,194,184,.2),rgba(201,194,184,.55) 55%,rgba(201,194,184,.75))}
+    .hero-content{width:100%;max-width:420px;margin:0 auto;padding:0 28px;transform:none}
+    .hero-logo{width:min(320px,86vw);margin-bottom:34px}
+    .hero .hero-cta{flex-direction:column;width:100%;max-width:320px}
+    .hero .hero-cta .btn{width:100%;justify-content:center}
+    .btn{text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+    .rcard{flex-basis:78vw}
+    .pvcard{flex-basis:70vw}
+    .res-arrows{display:none}
+  }
+  .drawer{position:fixed;inset:0;background:var(--grafite);z-index:150;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:44px;transform:translateY(-100%);transition:.45s cubic-bezier(.7,0,.2,1);opacity:0}
+  .drawer.open{transform:none;opacity:1}
+  .drawer a{font-family:var(--raleway);font-weight:500;font-size:1.8rem;padding:10px 0;border-bottom:1px solid var(--line-light-2);color:var(--branco)}
+  .drawer .close{position:absolute;top:30px;right:30px;font-size:1.6rem;background:none;border:0;color:var(--branco);cursor:pointer}
+  .drawer .btn{margin-top:26px;align-self:flex-start}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header id="hdr">
+  <nav class="nav">
+    <a class="logo sm" href="#topo" aria-label="BYPV Facial Artist">
+      <span class="mark">BYPV</span><span class="div"></span><span class="sub">Facial Artist</span>
+    </a>
+    <div class="nav-links">
+      <a href="#sobre" data-i18n="nav_sobre">Sobre</a>
+      <a href="#procedimentos" data-i18n="nav_procedimentos">Procedimentos</a>
+      <a href="#resultados" data-i18n="nav_resultados">Resultados</a>
+      <a href="#contato" data-i18n="nav_contato">Contato</a>
+    </div>
+    <div class="lang-switch" aria-label="Idioma">
+      <button type="button" id="langPt" aria-label="Português" title="Português">
+        <svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,3 27,10 15,17 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.2" fill="#002776"/></svg>
+      </button>
+      <button type="button" id="langEn" aria-label="English" title="English">
+        <svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#FFFFFF"/><rect width="30" height="2.2" y="0" fill="#B22234"/><rect width="30" height="2.2" y="4.4" fill="#B22234"/><rect width="30" height="2.2" y="8.8" fill="#B22234"/><rect width="30" height="2.2" y="13.2" fill="#B22234"/><rect width="30" height="2.2" y="17.6" fill="#B22234"/><rect width="13" height="11" fill="#3C3B6E"/></svg>
+      </button>
+    </div>
+    <a class="btn btn--solid-light js-wpp" href="#" data-i18n="btn_consulta">AGENDE UMA CONSULTA</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="close" id="closeBtn" aria-label="Fechar">✕</button>
+  <a href="#sobre" data-i18n="nav_sobre">Sobre</a>
+  <a href="#procedimentos" data-i18n="nav_procedimentos">Procedimentos</a>
+  <a href="#resultados" data-i18n="nav_resultados">Resultados</a>
+  <a href="#contato" data-i18n="nav_contato">Contato</a>
+  <a class="btn btn--outline-light js-wpp" href="#" data-i18n="btn_consulta">AGENDE UMA CONSULTA</a>
+  <div class="lang-switch" aria-label="Idioma">
+    <button type="button" id="langPtM" aria-label="Português" title="Português">
+      <svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,3 27,10 15,17 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.2" fill="#002776"/></svg>
+    </button>
+    <button type="button" id="langEnM" aria-label="English" title="English">
+      <svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#FFFFFF"/><rect width="30" height="2.2" y="0" fill="#B22234"/><rect width="30" height="2.2" y="4.4" fill="#B22234"/><rect width="30" height="2.2" y="8.8" fill="#B22234"/><rect width="30" height="2.2" y="13.2" fill="#B22234"/><rect width="30" height="2.2" y="17.6" fill="#B22234"/><rect width="13" height="11" fill="#3C3B6E"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="topo">
+  <div class="hero-bg"><img src="assets/dr-paulo-vitor-foto.jpg" alt="Dr. Paulo Vitor Rocha" /></div>
+  <div class="hero-overlay">
+    <div class="hero-content reveal">
+      <img class="hero-logo" src="assets/hero-logo.png" alt="Dr. Paulo Vitor Rocha — Harmonização Facial" />
+      <div class="hero-cta reveal d2">
+        <a class="btn btn--solid-dark js-wpp" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.045z"/></svg>
+          <span data-i18n="btn_consulta">AGENDE UMA CONSULTA</span>
+        </a>
+        <a class="btn btn--outline-dark" href="#resultados" data-i18n="hero_ver_resultados">Ver resultados</a>
+      </div>
+    </div>
+  </div>
+  <a class="hero-scroll" href="#sobre" aria-label="Rolar">
+    <span class="l" data-i18n="hero_scroll">Rolar</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
+</section>
+
+<!-- ===================== SOBRE ===================== -->
+<section class="sobre" id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-img reveal">
+      <span class="tag">BYPV · Facial Artist</span>
+      <div class="frame"><img src="assets/dr-paulo-vitor-sobre.jpg" alt="Dr. Paulo Vitor Rocha" /></div>
+    </div>
+    <div class="sobre-copy">
+      <div class="eyebrow reveal" data-i18n="sobre_eyebrow">Sobre</div>
+      <h2 class="reveal d1" data-i18n="sobre_h2">Sobre mim</h2>
+      <p class="reveal d2" data-i18n="sobre_p">Acredito que estética facial não é sobre transformar rostos, mas sobre refinar detalhes. Meu trabalho é unir técnica, planejamento e olhar estético para criar resultados personalizados, respeitando proporções, preservando características individuais e buscando sempre naturalidade.</p>
+      <ul class="creds reveal d3">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg></span> <span data-i18n="cred1">Cirurgião-Dentista · CRO-RJ 53790</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg></span> <span data-i18n="cred2">Especialista em Harmonização Orofacial pela Universidade Federal do Rio de Janeiro (UFRJ)</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg></span> <span data-i18n="cred3">Especialista em Prótese Dentária e Dentística Restauradora pela São Leopoldo Mandic</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg></span> <span data-i18n="cred4">Monitor de Harmonização Orofacial na Universidade Federal do Rio de Janeiro (UFRJ)</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg></span> <span data-i18n="cred5">Atuação focada em refinamento facial, equilíbrio estético e naturalidade.</span></li>
+      </ul>
+      <a class="btn btn--outline-dark js-wpp reveal d4" href="#" data-i18n="btn_consulta">AGENDE UMA CONSULTA</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCEDIMENTOS ===================== -->
+<section class="proc on-dark" id="procedimentos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="proc_h2">Procedimentos</h2>
+    </div>
+    <div class="proc-grid">
+      <div class="pcard reveal d1">
+        <div class="pimg">
+          <!-- SEM FOTO DE BTOX: troque o bloco .ph por <img src="..."> quando tiver -->
+          <div class="ph"><span class="mono">Bt</span><small data-i18n="ph_addfoto">Adicionar foto</small></div>
+        </div>
+        <div class="pbody"><div class="num">01</div><h3 data-i18n="proc1_title">Toxina Botulínica</h3><p class="brands">Dysport, Letybo, Xeomin, Botox</p><p data-i18n="proc1_desc">Aplicações personalizadas para terço superior, full face, sorriso gengival, masseter/bruxismo e outras estratégias faciais.</p></div>
+      </div>
+      <div class="pcard reveal d2">
+        <div class="pimg"><img src="assets/procedimento-preenchimento-labial.jpg" alt="Preenchimento labial" /></div>
+        <div class="pbody"><div class="num">02</div><h3 data-i18n="proc2_title">Preenchimento Labial</h3><p data-i18n="proc2_desc">Definição, proporção e refinamento dos lábios de forma personalizada.</p></div>
+      </div>
+      <div class="pcard reveal d3">
+        <div class="pimg">
+          <!-- SEM FOTO: troque o bloco .ph por <img src="..."> quando tiver -->
+          <div class="ph"><span class="mono">Ol</span><small data-i18n="ph_addfoto">Adicionar foto</small></div>
+        </div>
+        <div class="pbody"><div class="num">03</div><h3 data-i18n="proc3_title">Preenchimento de Olheiras</h3><p data-i18n="proc3_desc">Correção de perda de volume e melhora do aspecto cansado da região.</p></div>
+      </div>
+      <div class="pcard reveal d4">
+        <div class="pimg">
+          <!-- SEM FOTO: troque o bloco .ph por <img src="..."> quando tiver -->
+          <div class="ph"><span class="mono">Cf</span><small data-i18n="ph_addfoto">Adicionar foto</small></div>
+        </div>
+        <div class="pbody"><div class="num">04</div><h3 data-i18n="proc4_title">Contorno Facial</h3><p data-i18n="proc4_desc">Refinamento e definição dos contornos faciais para maior equilíbrio, estrutura e proporção.</p></div>
+      </div>
+      <div class="pcard reveal d1">
+        <div class="pimg">
+          <!-- SEM FOTO: troque o bloco .ph por <img src="..."> quando tiver -->
+          <div class="ph"><span class="mono">Rn</span><small data-i18n="ph_addfoto">Adicionar foto</small></div>
+        </div>
+        <div class="pbody"><div class="num">05</div><h3 data-i18n="proc5_title">Rinomodelação</h3><p data-i18n="proc5_desc">Harmonização do perfil nasal sem cirurgia através do uso de ácido hialurônico.</p></div>
+      </div>
+      <div class="pcard reveal d2">
+        <div class="pimg">
+          <!-- SEM FOTO: troque o bloco .ph por <img src="..."> quando tiver -->
+          <div class="ph"><span class="mono">Hm</span><small data-i18n="ph_addfoto">Adicionar foto</small></div>
+        </div>
+        <div class="pbody"><div class="num">06</div><h3 data-i18n="proc6_title">Harmonização Facial Masculina</h3><p data-i18n="proc6_desc">Estratégias individualizadas para valorização de traços masculinos com naturalidade e precisão.</p></div>
+      </div>
+      <div class="pcard reveal d3">
+        <div class="pimg">
+          <!-- SEM FOTO: troque o bloco .ph por <img src="..."> quando tiver -->
+          <div class="ph"><span class="mono">Hf</span><small data-i18n="ph_addfoto">Adicionar foto</small></div>
+        </div>
+        <div class="pbody"><div class="num">07</div><h3 data-i18n="proc7_title">Harmonização Facial Feminina</h3><p data-i18n="proc7_desc">Refinamento facial personalizado com foco em equilíbrio, leveza e proporção.</p></div>
+      </div>
+      <div class="pcard reveal d4">
+        <div class="pimg">
+          <!-- SEM FOTO: troque o bloco .ph por <img src="..."> quando tiver -->
+          <div class="ph"><span class="mono">Bc</span><small data-i18n="ph_addfoto">Adicionar foto</small></div>
+        </div>
+        <div class="pbody"><div class="num">08</div><h3 data-i18n="proc8_title">Bioestimuladores de Colágeno</h3><p class="brands">Sculptra, Radiesse, Harmonyca</p><p data-i18n="proc8_desc">Estímulo da produção natural de colágeno para melhora da firmeza, sustentação e qualidade facial.</p></div>
+      </div>
+      <div class="pcard reveal d1">
+        <div class="pimg">
+          <!-- SEM FOTO: troque o bloco .ph por <img src="..."> quando tiver -->
+          <div class="ph"><span class="mono">Hi</span><small data-i18n="ph_addfoto">Adicionar foto</small></div>
+        </div>
+        <div class="pbody"><div class="num">09</div><h3 data-i18n="proc9_title">Hialuronidase</h3><p data-i18n="proc9_desc">Procedimento utilizado para remoção de preenchimentos com ácido hialurônico.</p></div>
+      </div>
+      <div class="pcard reveal d2">
+        <div class="pimg">
+          <!-- SEM FOTO: troque o bloco .ph por <img src="..."> quando tiver -->
+          <div class="ph"><span class="mono">Sk</span><small data-i18n="ph_addfoto">Adicionar foto</small></div>
+        </div>
+        <div class="pbody"><div class="num">10</div><h3 data-i18n="proc10_title">Skinbooster</h3><p data-i18n="proc10_desc">Hidratação profunda da pele através de ácido hialurônico ou ativos regeneradores (PDRN, colágeno injetável, NC, exossomos, etc) para melhora da qualidade, viço e textura.</p></div>
+      </div>
+      <div class="pcard reveal d3">
+        <div class="pimg">
+          <!-- SEM FOTO: troque o bloco .ph por <img src="..."> quando tiver -->
+          <div class="ph"><span class="mono">Cp</span><small data-i18n="ph_addfoto">Adicionar foto</small></div>
+        </div>
+        <div class="pbody"><div class="num">11</div><h3 data-i18n="proc11_title">Consulta e Planejamento Facial Individualizado</h3><p data-i18n="proc11_desc">Avaliação detalhada para construção de um plano personalizado de tratamento facial.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESULTADOS ===================== -->
+<section class="resultados" id="resultados">
+  <div class="wrap">
+    <div class="res-head-row">
+      <div class="sec-head reveal">
+        <h2 data-i18n="res_h2">Resultados</h2>
+      </div>
+      <div class="res-arrows reveal d2">
+        <button id="resPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button id="resNext" aria-label="Próximo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+    <div class="res-track" id="resTrack">
+      <a class="rcard" href="resultados-full-face.html">
+        <span class="ab">Full Face</span>
+        <img src="assets/antes-depois-full-face.jpg" alt="Harmonização full face — antes e depois" />
+        <div class="cap"><div class="t" data-i18n="res1_title">Harmonização Full Face</div><div class="s" data-i18n="res_before_after">Antes &amp; Depois</div></div>
+      </a>
+      <a class="rcard" href="resultados-preenchimento-labial.html">
+        <span class="ab" data-i18n="res_lips">Lábios</span>
+        <img src="assets/antes-depois-preenchimento-labial.jpg" alt="Preenchimento labial — antes e depois" />
+        <div class="cap"><div class="t" data-i18n="res2_title">Preenchimento Labial</div><div class="s" data-i18n="res_before_after">Antes &amp; Depois</div></div>
+      </a>
+      <a class="rcard" href="resultados-preenchimento-labial.html">
+        <span class="ab" data-i18n="res_profile">Perfil</span>
+        <img src="assets/perfil-preenchimento-labial.jpg" alt="Preenchimento labial — perfil" />
+        <div class="cap"><div class="t" data-i18n="res2_title">Preenchimento Labial</div><div class="s" data-i18n="res_profile_contour">Perfil &amp; contorno</div></div>
+      </a>
+      <div class="rcard add"><div><div class="mono">+</div><small data-i18n-html="res_add">Adicione mais<br>antes &amp; depois aqui</small></div></div>
+      <div class="rcard add"><div><div class="mono">+</div><small data-i18n-html="res_add">Adicione mais<br>antes &amp; depois aqui</small></div></div>
+    </div>
+    <p class="res-note" data-i18n="res_note">Resultados podem variar de pessoa para pessoa. A indicação é definida em avaliação individual.</p>
+  </div>
+</section>
+
+<!-- ===================== PROVAS SOCIAIS ===================== -->
+<!--
+  Para cada print de depoimento: troque um bloco
+    <div class="pvcard ph">...</div>
+  por
+    <div class="pvcard"><img src="CAMINHO_DO_PRINT.jpg" alt="Depoimento de paciente"></div>
+-->
+<section class="provas on-dark">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow light" data-i18n="provas_eyebrow">Quem confia</div>
+      <h2 data-i18n-html="provas_h2">O que dizem <span class="thin">as pacientes.</span></h2>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="pv-track" id="pvTrack">
+      <div class="pvcard ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><b>Print 01</b><small data-i18n-html="pv_insira">Insira aqui o<br>print do depoimento</small></div>
+      <div class="pvcard ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><b>Print 02</b><small data-i18n-html="pv_insira">Insira aqui o<br>print do depoimento</small></div>
+      <div class="pvcard ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><b>Print 03</b><small data-i18n-html="pv_insira">Insira aqui o<br>print do depoimento</small></div>
+      <div class="pvcard ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><b>Print 04</b><small data-i18n-html="pv_insira">Insira aqui o<br>print do depoimento</small></div>
+      <div class="pvcard ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><b>Print 05</b><small data-i18n-html="pv_insira">Insira aqui o<br>print do depoimento</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta">
+  <div class="wrap reveal">
+    <div class="logo lg" style="justify-content:center">
+      <span class="mark">BYPV</span><span class="div"></span><span class="sub">Facial Artist</span>
+    </div>
+    <h2 data-i18n-html="cta_h2">Sua transformação começa com uma <span class="thin">avaliação.</span></h2>
+    <p data-i18n="cta_p">Agende pelo WhatsApp e descubra o plano ideal para realçar a sua beleza com segurança e naturalidade.</p>
+    <a class="btn btn--solid-dark js-wpp" href="#">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.045z"/></svg>
+      <span data-i18n="btn_consulta">AGENDE UMA CONSULTA</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===================== CONTATO / FOOTER ===================== -->
+<section class="contato on-dark" id="contato">
+  <div class="wrap contato-grid">
+    <div class="reveal">
+      <div class="eyebrow light" data-i18n="contato_eyebrow">Contato</div>
+      <h2 data-i18n-html="contato_h2">Vamos <span class="thin">conversar?</span></h2>
+      <ul class="info">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><b data-i18n="contato_endereco_label">Endereço</b><span>Rua Engenheiro Enaldo Cravo Peixoto, 215, Sala 207 · Tijuca, Rio de Janeiro RJ · CEP 20540-106</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.045z"/></svg>
+          <div><b>WhatsApp</b><span class="js-wpp-text">(21) 92006-6424</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <div><b>Instagram</b><span><a class="js-ig" href="#">@vitorpsar</a></span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><b data-i18n="contato_horario_label">Horário</b><span data-i18n="contato_horario_valor">Segunda a sexta · agendamento prévio</span></div>
+        </li>
+      </ul>
+      <a class="btn btn--solid-light js-wpp" href="#" data-i18n="btn_consulta">AGENDE UMA CONSULTA</a>
+    </div>
+    <div class="map reveal d2">
+      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=-22.922400,-43.234699(Dr+Paulo+Vitor+Rocha)&t=m&z=16&output=embed&iwloc=near"></iframe>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <footer>
+      <a class="logo sm" href="#topo"><span class="mark">BYPV</span><span class="div"></span><span class="sub">Facial Artist</span></a>
+      <div class="socials">
+        <a class="js-ig" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="js-wpp" href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.045z"/></svg></a>
+      </div>
+      <small>© <span id="yr"></span> BYPV · Facial Artist · <span data-i18n="footer_rights">Todos os direitos reservados</span> · bypv.com.br</small>
+    </footer>
+  </div>
+</section>
+
+<a class="float-wpp js-wpp" href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.045z"/></svg>
+</a>
+
+<script>
+  /* ====== CONFIGURAÇÕES — TROCAR AQUI ====== */
+  const WHATSAPP = "5521920066424";
+  const MSG_PT = "Olá! Vim pelo site da BYPV e gostaria de agendar minha avaliação com o Dr. Paulo Vitor.";
+  const MSG_EN = "Hello! I found the BYPV website and I'd like to book my consultation with Dr. Paulo Vitor.";
+  const INSTAGRAM = "https://instagram.com/vitorpsar";
+  /* ========================================= */
+
+  /* ====== IDIOMA (PT / EN) ====== */
+  const I18N = {
+    pt: {
+      nav_sobre:"Sobre", nav_procedimentos:"Procedimentos", nav_resultados:"Resultados", nav_contato:"Contato",
+      btn_consulta:"AGENDE UMA CONSULTA",
+      hero_ver_resultados:"Ver resultados", hero_scroll:"Rolar",
+      sobre_eyebrow:"Sobre", sobre_h2:"Sobre mim",
+      sobre_p:"Acredito que estética facial não é sobre transformar rostos, mas sobre refinar detalhes. Meu trabalho é unir técnica, planejamento e olhar estético para criar resultados personalizados, respeitando proporções, preservando características individuais e buscando sempre naturalidade.",
+      cred1:"Cirurgião-Dentista · CRO-RJ 53790",
+      cred2:"Especialista em Harmonização Orofacial pela Universidade Federal do Rio de Janeiro (UFRJ)",
+      cred3:"Especialista em Prótese Dentária e Dentística Restauradora pela São Leopoldo Mandic",
+      cred4:"Monitor de Harmonização Orofacial na Universidade Federal do Rio de Janeiro (UFRJ)",
+      cred5:"Atuação focada em refinamento facial, equilíbrio estético e naturalidade.",
+      proc_h2:"Procedimentos", ph_addfoto:"Adicionar foto",
+      proc1_title:"Toxina Botulínica", proc1_desc:"Aplicações personalizadas para terço superior, full face, sorriso gengival, masseter/bruxismo e outras estratégias faciais.",
+      proc2_title:"Preenchimento Labial", proc2_desc:"Definição, proporção e refinamento dos lábios de forma personalizada.",
+      proc3_title:"Preenchimento de Olheiras", proc3_desc:"Correção de perda de volume e melhora do aspecto cansado da região.",
+      proc4_title:"Contorno Facial", proc4_desc:"Refinamento e definição dos contornos faciais para maior equilíbrio, estrutura e proporção.",
+      proc5_title:"Rinomodelação", proc5_desc:"Harmonização do perfil nasal sem cirurgia através do uso de ácido hialurônico.",
+      proc6_title:"Harmonização Facial Masculina", proc6_desc:"Estratégias individualizadas para valorização de traços masculinos com naturalidade e precisão.",
+      proc7_title:"Harmonização Facial Feminina", proc7_desc:"Refinamento facial personalizado com foco em equilíbrio, leveza e proporção.",
+      proc8_title:"Bioestimuladores de Colágeno", proc8_desc:"Estímulo da produção natural de colágeno para melhora da firmeza, sustentação e qualidade facial.",
+      proc9_title:"Hialuronidase", proc9_desc:"Procedimento utilizado para remoção de preenchimentos com ácido hialurônico.",
+      proc10_title:"Skinbooster", proc10_desc:"Hidratação profunda da pele através de ácido hialurônico ou ativos regeneradores (PDRN, colágeno injetável, NC, exossomos, etc) para melhora da qualidade, viço e textura.",
+      proc11_title:"Consulta e Planejamento Facial Individualizado", proc11_desc:"Avaliação detalhada para construção de um plano personalizado de tratamento facial.",
+      res_h2:"Resultados", res1_title:"Harmonização Full Face", res2_title:"Preenchimento Labial",
+      res_before_after:"Antes & Depois", res_lips:"Lábios", res_profile:"Perfil", res_profile_contour:"Perfil & contorno",
+      res_add:"Adicione mais<br>antes &amp; depois aqui",
+      res_note:"Resultados podem variar de pessoa para pessoa. A indicação é definida em avaliação individual.",
+      provas_eyebrow:"Quem confia", provas_h2:"O que dizem <span class=\"thin\">as pacientes.</span>",
+      pv_insira:"Insira aqui o<br>print do depoimento",
+      cta_h2:"Sua transformação começa com uma <span class=\"thin\">avaliação.</span>",
+      cta_p:"Agende pelo WhatsApp e descubra o plano ideal para realçar a sua beleza com segurança e naturalidade.",
+      contato_eyebrow:"Contato", contato_h2:"Vamos <span class=\"thin\">conversar?</span>",
+      contato_endereco_label:"Endereço", contato_horario_label:"Horário", contato_horario_valor:"Segunda a sexta · agendamento prévio",
+      footer_rights:"Todos os direitos reservados"
+    },
+    en: {
+      nav_sobre:"About", nav_procedimentos:"Procedures", nav_resultados:"Results", nav_contato:"Contact",
+      btn_consulta:"BOOK A CONSULTATION",
+      hero_ver_resultados:"See results", hero_scroll:"Scroll",
+      sobre_eyebrow:"About", sobre_h2:"About me",
+      sobre_p:"I believe facial aesthetics isn't about transforming faces, but about refining details. My work brings together technique, planning and an aesthetic eye to create personalized results, respecting proportions, preserving each patient's individual features and always aiming for a natural look.",
+      cred1:"Dentist · CRO-RJ 53790",
+      cred2:"Specialist in Orofacial Harmonization from the Federal University of Rio de Janeiro (UFRJ)",
+      cred3:"Specialist in Prosthodontics and Restorative Dentistry from São Leopoldo Mandic",
+      cred4:"Teaching Assistant in Orofacial Harmonization at the Federal University of Rio de Janeiro (UFRJ)",
+      cred5:"Practice focused on facial refinement, balance, and natural results.",
+      proc_h2:"Procedures", ph_addfoto:"Add photo",
+      proc1_title:"Botulinum Toxin", proc1_desc:"Personalized applications for upper face treatment, full face approaches, gummy smile correction, masseter/bruxism management, and other facial treatment strategies.",
+      proc2_title:"Lip Filler", proc2_desc:"Personalized lip enhancement focused on definition, proportion, and refinement.",
+      proc3_title:"Under-Eye Filler", proc3_desc:"Correction of volume loss and improvement of tired-looking under-eye appearance.",
+      proc4_title:"Facial Contouring", proc4_desc:"Facial refinement and definition designed to enhance balance, structure, and proportions.",
+      proc5_title:"Non-Surgical Rhinoplasty", proc5_desc:"Nasal profile enhancement without surgery using hyaluronic acid.",
+      proc6_title:"Male Facial Balancing", proc6_desc:"Individualized strategies focused on enhancing masculine features while preserving natural results.",
+      proc7_title:"Female Facial Balancing", proc7_desc:"Personalized facial refinement focused on balance, softness, and proportion.",
+      proc8_title:"Collagen Biostimulators", proc8_desc:"Stimulation of natural collagen production to improve firmness, support, and overall facial quality.",
+      proc9_title:"Hyaluronidase", proc9_desc:"Procedure used for the removal of hyaluronic acid fillers.",
+      proc10_title:"Skinboosters", proc10_desc:"Deep skin hydration using hyaluronic acid or regenerative agents (PDRN, injectable collagen, NC, exosomes, etc.) to improve skin quality, glow, and texture.",
+      proc11_title:"Consultation & Personalized Facial Planning", proc11_desc:"Detailed facial assessment and individualized treatment planning.",
+      res_h2:"Results", res1_title:"Full Face Harmonization", res2_title:"Lip Filler",
+      res_before_after:"Before & After", res_lips:"Lips", res_profile:"Profile", res_profile_contour:"Profile & contour",
+      res_add:"Add more<br>before &amp; after here",
+      res_note:"Results may vary from person to person. The right treatment is defined during an individual consultation.",
+      provas_eyebrow:"Who trusts us", provas_h2:"What patients <span class=\"thin\">say.</span>",
+      pv_insira:"Insert testimonial<br>screenshot here",
+      cta_h2:"Your transformation starts with a <span class=\"thin\">consultation.</span>",
+      cta_p:"Book on WhatsApp and find out the ideal plan to enhance your beauty with safety and naturalness.",
+      contato_eyebrow:"Contact", contato_h2:"Let's <span class=\"thin\">talk?</span>",
+      contato_endereco_label:"Address", contato_horario_label:"Hours", contato_horario_valor:"Monday to Friday · by appointment",
+      footer_rights:"All rights reserved"
+    }
+  };
+
+  function setLang(lang){
+    const dict = I18N[lang];
+    document.querySelectorAll("[data-i18n]").forEach(el => { if (dict[el.dataset.i18n] != null) el.textContent = dict[el.dataset.i18n]; });
+    document.querySelectorAll("[data-i18n-html]").forEach(el => { if (dict[el.dataset.i18nHtml] != null) el.innerHTML = dict[el.dataset.i18nHtml]; });
+    document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+    [langPt, langPtM].forEach(b => b && b.classList.toggle("active", lang === "pt"));
+    [langEn, langEnM].forEach(b => b && b.classList.toggle("active", lang === "en"));
+    localStorage.setItem("bypv_lang", lang);
+    const wppLink = "https://api.whatsapp.com/send?phone=" + WHATSAPP + "&text=" + encodeURIComponent(lang === "en" ? MSG_EN : MSG_PT);
+    document.querySelectorAll(".js-wpp").forEach(a => a.setAttribute("href", wppLink));
+  }
+  const langPt = document.getElementById("langPt"), langEn = document.getElementById("langEn");
+  const langPtM = document.getElementById("langPtM"), langEnM = document.getElementById("langEnM");
+  [langPt, langPtM].forEach(b => b && b.addEventListener("click", () => setLang("pt")));
+  [langEn, langEnM].forEach(b => b && b.addEventListener("click", () => setLang("en")));
+  setLang(localStorage.getItem("bypv_lang") === "en" ? "en" : "pt");
+  /* ================================ */
+
+  document.querySelectorAll(".js-ig").forEach(a => a.setAttribute("href", INSTAGRAM));
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  const hdr = document.getElementById("hdr");
+  addEventListener("scroll", () => hdr.classList.toggle("scrolled", scrollY > 40));
+
+  const drawer = document.getElementById("drawer");
+  document.getElementById("menuBtn").onclick = () => drawer.classList.add("open");
+  document.getElementById("closeBtn").onclick = () => drawer.classList.remove("open");
+  drawer.querySelectorAll("a").forEach(a => a.onclick = () => drawer.classList.remove("open"));
+
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} });
+  }, { threshold: .12 });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  addEventListener("load", () => document.querySelectorAll(".hero .reveal").forEach(el => el.classList.add("in")));
+
+  // carrosséis: setas + arrastar
+  const resTrack = document.getElementById("resTrack");
+  const step = () => Math.min(resTrack.clientWidth * .8, 350);
+  document.getElementById("resNext").onclick = () => resTrack.scrollBy({left: step(), behavior:"smooth"});
+  document.getElementById("resPrev").onclick = () => resTrack.scrollBy({left:-step(), behavior:"smooth"});
+
+  function enableDrag(track){
+    let down=false, startX, sl, moved=0;
+    track.addEventListener("pointerdown", e=>{down=true;moved=0;startX=e.pageX;sl=track.scrollLeft;track.classList.add("drag")});
+    track.addEventListener("pointermove", e=>{if(!down)return;const dx=e.pageX-startX;moved=Math.abs(dx);track.scrollLeft=sl-dx});
+    const up=()=>{down=false;track.classList.remove("drag")};
+    track.addEventListener("pointerup",up); track.addEventListener("pointerleave",up);
+    track.addEventListener("click",e=>{if(moved>6){e.preventDefault();e.stopPropagation()}},true);
+  }
+  enableDrag(resTrack);
+  enableDrag(document.getElementById("pvTrack"));
+</script>
+</body>
+</html>
